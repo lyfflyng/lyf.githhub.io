@@ -1,0 +1,82 @@
+import random
+point3=random.randrange(1,50)
+def caishu():
+    kaish=input('输入你猜的数字(1——50)：')
+    kaishi=int(kaish)
+    if kaishi==point3:
+        print('double win!!')
+    elif kaishi>point3:
+        print('Lose...')
+        caishu()
+    else :
+        print('win!')
+
+
+def caidaxiao():
+    print('<<<<<<<GAME STARTS!>>>>>>>>>')
+    cho = input('Choose small or big：')
+    point1 = random.randrange(1, 7)
+    point = random.randrange(1, 7)
+    point2 = random.randrange(1, 7)
+    sum=point1+point+point2
+    if cho=='big'and 11<=sum<=18:
+        print('THE POINTS ARE', point, point2, point1)
+        print('won',much)
+
+    elif cho=='small'and 3<=sum<=10:
+        print('THE POINTS ARE', point, point2, point1)
+        print('won')
+    else:
+        print('THE POINTS ARE', point, point2, point1)
+        print('you lose!!!!!!hhh')
+
+
+
+def bet():
+    begin=1000
+    while begin>0:
+        print('<<<<<<<GAME STARTS!>>>>>>>>>')
+        muc=input('How much you wanna bet?')
+        much=int(muc)
+        cho = input('Choose small or big：')
+        point1 = random.randrange(1, 7)
+        point = random.randrange(1, 7)
+        point2 = random.randrange(1, 7)
+        sum = point1 + point + point2
+        if cho == 'big' and 11 <= sum <= 18:
+            print('THE POINTS ARE', point, point2, point1)
+            begin=begin+much
+            print('won', much,'now you have',begin)
+        elif cho == 'small' and 3 <= sum <= 10:
+            print('THE POINTS ARE', point, point2, point1)
+            begin = begin + much
+            print('won', much, 'now you have', begin)
+        else:
+            print('THE POINTS ARE', point, point2, point1)
+            begin = begin - much
+            print('you lose!!!!!!', much, 'now you have', begin)
+    print('GAME OVER!')
+
+
+？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+def shouji():
+    CN_MOBILE=[134,135,136,137,138,139]
+    CN_UNIO=[130,131,132,155]
+    CN_TETCOM=[133,153,180]
+    GET=input('Enter your numner:')
+    if int(GET)<=10000000000:
+        print('should in 11')
+        shouji()
+    elif int(GET)<12999999999:
+        print('no such a operator')
+        shouji()
+    else:
+        if GET[:3] in CN_MOBILE:
+            print('cn')
+        elif GET[:3] in CN_TETCOM:
+            print('tetcom')
+        elif GET[:3] in CN_UNIO:
+            print('union')
+            print('we will send a message to your phone')
+        else:
+            print('...')
