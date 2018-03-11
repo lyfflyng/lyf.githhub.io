@@ -1,0 +1,61 @@
+password_list=['gaoyuan','shagou']
+def mima():
+    time=3
+    while time>0:
+        password=input('Password:')
+        if password==password_list[-1]:
+             print('succeed!')
+        elif password==password_list[0]:
+            print('reset!')
+            new_password=input('new_password!:')
+            password_list.append(new_password)
+            print('Change successfully!')
+            mima()
+        else:
+            print('Wrong!')
+            time=time-1
+            print(time,'剩余')
+    else:
+        print('失败')
+
+
+for every_letter in 'Hello world':
+    print(every_letter)
+for num in range(1,11):
+    print(str(num)+'+1=',num+1)
+
+songlist=['Holy Diver','Thunderstrucke','Rebel Rebel']
+for song in songlist:
+    if song=='Holy Diver':
+        print(song,'-DIO')
+
+
+for i in range(1,10):
+    for j in range(1,10):
+        print('{}*{}={}'.format(i,j,i*j))
+
+
+
+def text_create3(nam,msg):
+    for i in range(1,nam):
+        desktop_path='/Users/Administrator/Desktop/'
+        full_path=desktop_path+str(i)+'.txt'
+        file=open(full_path,'w')
+        file.write(msg)
+        print('Done')
+        file.close()
+
+
+
+
+for i in range(1,101):
+    if i%2==0:
+        print(i)
+
+
+def invest(amount,rate,timey):
+    print('p a',amount)
+    for y in range(1,timey):
+        amount=amount*(1+rate)
+        print(amount,' ',y)
+invest(100,0.05,9)
