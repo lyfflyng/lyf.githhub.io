@@ -1,0 +1,57 @@
+class CocaCola:
+    formula=['caffeine','sugar','water','soda']
+    def __init__(self,logo_name):
+        self.logo_logo=logo_name
+    def drink(self,how_much):
+        if how_much=='a sip':
+            print('COOL')
+        elif how_much=='whole bottle':
+            print('Headache~~')
+coke_for_me=CocaCola('可口')
+print(coke_for_me.logo_logo)
+for element in coke_for_me.formula:
+    print(element)
+
+'''coke_for_CHINA=CocaCola()
+coke_for_CHINA.local_logo='可口可乐'
+print(coke_for_CHINA.local_logo)
+coke_for_CHINA.drink('whole bottle')'''
+
+
+
+
+class cola:
+    calories=140
+    sodium=45
+    total_carb=39
+    def __init__(self,log):
+        self.logo=log
+    def drink(self):
+        print('You got {} cal energy!'.format(self.calories))
+i=cola('haohe')
+print(i.drink())
+
+
+
+class cfree(cola):
+    caffeine=0
+cof=cfree('FREE!!!')
+print(cof.drink())
+
+
+class A:
+    atter=1
+    def __init__(self):
+        self.atter=43
+b=A()
+a=A()
+print(a.__dict__)
+print(A.__dict__)
+
+
+
+obj1=1
+obj2='String'
+obj3=[]
+obj4={}
+print(type(obj1),type(obj2),type(obj3),type(obj4))
